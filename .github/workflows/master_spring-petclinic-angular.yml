@@ -25,8 +25,9 @@ jobs:
         run: |
           npm install @angular/cli
           npm --prefix ./ run build --if-present
-          npm --prefix ./ run test --if-present
           npm --prefix ./ run war
+          pwd
+          ls -al ./dist
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
